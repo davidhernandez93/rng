@@ -8,4 +8,12 @@ boton.addEventListener('click', function(){
     num.classList.remove('hidden');
     num.textContent = random;
 });
-// generator();
+document.addEventListener('keyup', function(event){
+    // console.log(event);
+    // console.log(event.key);
+    if(event.key === 'Escape'){
+        num.classList.add('hidden');
+        console.log('closed')
+        random = Math.trunc(Math.random()*10+1);
+    }
+});
