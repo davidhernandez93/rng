@@ -2,18 +2,12 @@
 let num = document.getElementsByClassName('numero')[0];
 const boton = document.getElementsByClassName('bot')[0];
 var random = Math.trunc(Math.random()*10+1);
-// console.log(random)
 
-boton.addEventListener('click', function(){
+function generar(){
     num.classList.remove('hidden');
     num.textContent = random;
-});
-document.addEventListener('keyup', function(event){
-    // console.log(event);
-    // console.log(event.key);
-    if(event.key === 'Escape'){
-        num.classList.add('hidden');
-        console.log('closed')
-        random = Math.trunc(Math.random()*10+1);
-    }
-});
+    boton.textContent = 'De nuevo!';
+    random = Math.trunc(Math.random()*10+1);
+}
+boton.addEventListener('click', generar);
+boton.addEventListener('touchstart', generar)

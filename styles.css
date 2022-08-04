@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: 80vh;
     background: rgb(24,45,226);
     background: linear-gradient(90deg, rgba(24,45,226,1) 12%, rgba(255,47,205,0.9472163865546218) 59%);
     display: flex;
@@ -26,18 +26,13 @@ body{
     background-clip: border-box;
     animation: spin 5s linear infinite;
     display: inline;
-    z-index: 1;
+    z-index: 1;    
     
-}
+}   
 @keyframes spin { 
     100% { 
       transform: rotateZ(360deg);
     }
-}
-.inside{
-    background-color: transparent;
-    height: inherit;
-    border-radius: 50%;
 }
 .hidden{
     display: none;
@@ -46,7 +41,9 @@ body{
     color:antiquewhite;
     font-weight: bold;
     font-size: 1.5rem;
-    
+}
+.botContainer{
+    padding-top: 20%;
 }
 .bot{
     font-weight: bold;
@@ -56,4 +53,12 @@ body{
     border-color: blueviolet;
     font-size: 1.5rem;
     color:antiquewhite;
+}
+@media (max-width: 500px){
+    .botContainer{
+        margin-top: 35%;
+    }
+    body{
+        height: 50vh;
+    }
 }
