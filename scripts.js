@@ -10,4 +10,4 @@ function generar(){
     random = Math.trunc(Math.random()*10+1);
 }
 boton.addEventListener('click', generar);
-boton.addEventListener('touchend', generar);
+// boton.addEventListener('touchend', generar);
